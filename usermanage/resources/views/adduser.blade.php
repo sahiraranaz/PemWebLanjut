@@ -102,26 +102,26 @@
         <br><br>
         <div class="card">
         <div class="card-header">
-        <h2>Edit User</h2><br>
-        <form action="/user/update/{{$films->id}}" method="post">  
+        <h2>Add User</h2><br>
+        <form action="/user/create" method="post">             
             @csrf
             <div class="form-group">                 
                 <label for="name">Name</label>                 
-                <input type="text" class="form-control" required="required" name="name" value="{{$films->name}}"></br>             
+                <input type="text" class="form-control" required="required" name="name"></br>             
             </div>
             <div class="form-group">                 
                 <label for="email">Email</label>                 
-                <input type="text" class="form-control" required="required" name="email" value="{{$films->email}}"></br>             
+                <input type="text" class="form-control" required="required" name="email"></br>             
             </div>  
             <div class="form-group">                 
                 <label for="password">Password</label>                 
-                <input type="text" class="form-control" required="required" name="password" value="{{$films->password}}"></br>             
+                <input type="text" class="form-control" required="required" name="password"></br>             
             </div>              
             <div class="form-group">                 
                 <label for="roles">Roles</label>                 
-                <input type="text" class="form-control" required="required" name="roles" value="{{$films->roles}}"></br>             
+                <input type="text" class="form-control" required="required" name="roles"></br>             
             </div>                    
-            <button type="submit" name="add" class="btn btn-primary float-right">Update User</button>    
+            <button type="submit" name="add" class="btn btn-primary float-right">Add User</button>    
         </form></div></div>
         </div>
       <!-- Sidebar Widgets Column -->
