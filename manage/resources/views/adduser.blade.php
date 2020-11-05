@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Article</title>
+  <title>User</title>
 
 <!-- Bootstrap core CSS -->
 <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
@@ -26,7 +26,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-pink fixed-top" style="background-color:#FFB6C1">
     <div class="container">
-      <a class="navbar-brand" href="#">Manage Article</a>
+      <a class="navbar-brand" href="#">Manage Users</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
