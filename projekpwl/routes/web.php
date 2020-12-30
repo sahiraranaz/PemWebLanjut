@@ -27,7 +27,7 @@ Auth::routes();
 // HALAMAN ADMIN
 
 Route::group(['middleware' => ['auth']], function () {  
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/home', 'TransactionController@index')->name('index');
     Route::resource('/products','RestoController');
     Route::get('/transcation', 'TransactionController@index');
     Route::post('/transcation/addproduct/{id}', 'TransactionController@addProductCart');
