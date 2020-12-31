@@ -17,7 +17,7 @@
                         </tr>
                         @foreach ($history as $index=>$item)
                         @if(Auth::user()->roles == 'User')
-                        @if(Auth::user()->name == $item-> user ->name)
+                        @if(Auth::user()->id == $item->user_id)
                             <tr>
                                 <td>{{$index+1}}</td>
                                 <td>{{$item->invoices_number}}</td>
@@ -29,14 +29,18 @@
                         @endif
                         @endif
                         @if(Auth::user()->roles == 'Administrator')
+                        @foreach($user as $u)
+                        @if($item->user_id==$u->id)
                             <tr>
                                 <td>{{$index+1}}</td>
                                 <td>{{$item->invoices_number}}</td>
-                                <td>{{$item->user->name}}</td>
+                                <td>{{$u->name}}</td>
                                 <td>{{$item->pay}}</td>
                                 <td>{{$item->total}}</td>
                             <td><a href="{{url('/transcation/laporan', $item->invoices_number )}}" class="btn btn-primary btn-sm"><i class="fas fa-print"></i></a></td>
                             </tr>
+                        @endif
+                        @endforeach
                         @endif
                         @endforeach                        
                     </table>

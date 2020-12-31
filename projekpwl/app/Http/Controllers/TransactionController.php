@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\User;
 use App\Resto;
 use App\HistoryProduct;
 use App\ProductTranscation;
@@ -211,7 +212,8 @@ public function __construct()
     }
     public function history(){
         $history = Transcation::orderBy('created_at','desc')->paginate(10);
-        return view('pos.history',compact('history'));
+        $user = User::all();
+        return view('pos.history',compact('history','user'));
     }
     public function laporan($id){
         $transaksi = Transcation::with('productTranscation')->find($id);
